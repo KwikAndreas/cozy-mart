@@ -41,7 +41,7 @@ const CardProdukDetail: React.FC<ProdukDetailProps> = ({
             &times;
           </label>
 
-          <div className="w-1/2 p-8 flex items-center justify-center bg-gray-50">
+          <div className="w-1/2 p-8 flex items-center justify-center bg-white">
             <Image
               src={src}
               alt={alt}
@@ -60,9 +60,9 @@ const CardProdukDetail: React.FC<ProdukDetailProps> = ({
               <p className="text-2xl font-semibold text-green-600 mb-2">
                 {harga}
               </p>
-              <p className="text-sm text-gray-500">
+              {/* <p className="text-sm text-gray-500">
                 Harga sudah termasuk pajak
-              </p>
+              </p> */}
             </div>
 
             <div className="mb-6">

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CardProduk from "../components/card_produk";
 
 const Produk = () => {
@@ -137,7 +137,7 @@ const Produk = () => {
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
-  const itemsPerPage = 6;
+  const [itemsPerPage, setItemsPerPage] = useState(6);
 
   const nextProduct = () => {
     if (currentIndex + itemsPerPage < produk.length) {
@@ -150,8 +150,30 @@ const Produk = () => {
       setCurrentIndex(currentIndex - itemsPerPage);
     }
   };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 640) {
+        setItemsPerPage(2);
+      } else if (window.innerWidth < 1024) {
+        setItemsPerPage(4);
+      } else {
+        setItemsPerPage(6); 
+      }
+    };
+
+    handleResize();
+
+    window.addEventListener('resize', handleResize);
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  const totalPages = Math.ceil(produk.length / itemsPerPage);
+  const currentPage = Math.floor(currentIndex / itemsPerPage);
+
   return (
-    <section id="produk" className="relative">
+    <section id="produk" className="relative mt-6">
       <div className="w-full max-w-[840px] mx-auto relative">
         <h1 className="text-2xl font-bold mb-4 text-gray-700">Produk</h1>
 
