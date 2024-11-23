@@ -119,7 +119,7 @@ const Category = () => {
   };
 
   return (
-    <section className="w-full max-w-[840px] mx-auto relative mt-6">
+    <section className="w-full max-w-[840px] mx-auto relative mt-4">
       <h2 className="text-2xl font-bold mb-4 text-gray-700">Kategori Produk</h2>
 
       <div className="relative">

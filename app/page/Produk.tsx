@@ -169,9 +169,6 @@ const Produk = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  const totalPages = Math.ceil(produk.length / itemsPerPage);
-  const currentPage = Math.floor(currentIndex / itemsPerPage);
-
   return (
     <section id="produk" className="relative mt-6">
       <div className="w-full max-w-[840px] mx-auto relative">
