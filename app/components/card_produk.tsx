@@ -25,7 +25,6 @@ const CardProduk: React.FC<produk_props> = ({
   harga,
   ukuran = [],
 }) => {
-  const [isHover, setIsHover] = useState(false);
   return (
     <div className="relative">
       <input type="checkbox" id={`produk-${id}`} className="hidden peer" />
