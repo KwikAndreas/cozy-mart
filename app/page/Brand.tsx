@@ -114,14 +114,10 @@ const Brand = () => {
             transition-all
             duration-300
             disabled:cursor-not-allowed
+            text-black
           "
           >
-            <Image
-              src="/icons/arrow-left.svg"
-              alt="Previous"
-              width={20}
-              height={20}
-            />
+            {"<"}
           </button>
           <button
             onClick={handleNext}
@@ -136,14 +132,10 @@ const Brand = () => {
             transition-all
             duration-300
             disabled:cursor-not-allowed
+            text-black
           "
           >
-            <Image
-              src="/icons/arrow-right.svg"
-              alt="Next"
-              width={20}
-              height={20}
-            />
+            {">"}
           </button>
         </div>
       </div>
